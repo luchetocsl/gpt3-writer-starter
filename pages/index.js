@@ -41,10 +41,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Write your tweets for the week</h1>
+            <h1>What do you want GPT-3 to imagine?</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Copy your blog post and turn it into your tweets for the week</h2>
+            <h2>Write your idea and GPT-3 will help you write a better prompt</h2>
           </div>
         </div>
 
