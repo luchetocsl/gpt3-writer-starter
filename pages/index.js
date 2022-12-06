@@ -38,14 +38,38 @@ const Home = () => {
       <Head>
         <title>GPT-3 Writer | buildspace</title>
       </Head>
+      
+      <div className="header-title">
+        <h1>Write your idea and let GPT create your prompt</h1>
+      </div>
+
+
       <div className="container">
         <div className="header">
-          <div className="header-title">
-            <h1>What do you want GPT-3 to imagine?</h1>
-          </div>
-          <div className="header-subtitle">
-            <h2>Write your idea and GPT-3 will help you write a better prompt</h2>
-          </div>
+            <p className='small'>
+            <b>About</b>
+            </p>
+            <p className='small'>
+            I love creating images on Lexica.art but writing good prompts is not always easy. 
+            </p>
+            <p className='small'>
+            So, I created this website that helps you fill in the blanks so that you can have a complete prompt. 
+            </p>
+            <p className='small'>
+            Use it as it is, or remix it, or generated another prompt until you are satisfied. 
+            </p>
+            <p className='small'>
+            This is your playground. 
+            </p>
+            <p className='small'>
+            <b>Instructions</b>
+            </p>
+            <p className='small'>
+            Write the protagonist of your idea in the text box. Then click generate. 
+            </p>
+            <p className='small'>
+            The app will take sometime coming up with your promp and then it will spit it in the blue box. 
+            </p>        
         </div>
 
         <div className="prompt-container">
@@ -62,40 +86,37 @@ const Home = () => {
             onClick={callGenerateEndpoint}>
 
             <div className="generate">
-            {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
+            {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
             </div>
           
           </a>
         </div>
 
-        {apiOutput && (
-          <div className="output">
-            <div className="output-header-container">
-              <div className="output-header">
-                <h3>Output</h3>
-              </div>
-            </div>
+        </div>
+
+        <div className="output">
             <div className="output-content">
-              <p>{apiOutput}</p>
+            {apiOutput && (
+              <p>{userInput}{apiOutput}</p>
+            )}
             </div>
-          </div>
-        )}
-
+        </div>
 
       </div>
 
-      </div>
-      <div className="badge-container grow">
-        <a
-          href="https://buildspace.so/builds/ai-writer"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="badge">
-            <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
-          </div>
-        </a>
+      <div className="footer">
+        <div className="badge-container grow">
+          <a
+            href="https://buildspace.so/builds/ai-writer"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="badge">
+              <Image src={buildspaceLogo} alt="buildspace logo" />
+              <p>build with buildspace</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
