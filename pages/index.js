@@ -100,6 +100,7 @@ const Home = () => {
               <p>{userInput}{apiOutput}</p>
             )}
             </div>
+            <a className='button-lexica' target="_blank" href="https://lexica.art/"> Try your prompt on Lexica.art</a>
         </div>
 
       </div>
